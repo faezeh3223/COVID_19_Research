@@ -4,7 +4,9 @@ In this project, object-oriented programming method is used, because in order to
 Due to the large size of data in an article, which is the same as .json files, a series of settings must be made on elasticsearch, otherwise this service is not ready to store information in this way.
 The first thing we encountered during storage was the limited storage size of fields in elasticsearch. which should be increased by one of the methods mentioned in the educational documents of www.elastic.co according to the used version.
 Here we used the method described for the .net version of the API, which is as follows:
+
 client.LowLevel.Indices.UpdateSettingsForAll<StringResponse>(PostData.Serializable(new { index = new { mapping = new { total_fields = new { limit = 100000 } } } }));
+
 Here, the limit value is the size limit of the fields, which is equal to 1000 by default, and we have increased its value to a significant extent.
 The next thing to pay attention to is the size of the heap, which also needs to be increased to store long data. Based on the relevant training documents, the jvm.options file should be changed as follows to increase the size of the heap:
 ![Capture](https://github.com/faezeh3223/COVID_19_Research/assets/50834330/efe201f7-6625-4b76-a20c-1f7e25f021d6)
