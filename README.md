@@ -9,6 +9,7 @@ Here, the limit value is the size limit of the fields, which is equal to 1000 by
 The next thing to pay attention to is the size of the heap, which also needs to be increased to store long data. Based on the relevant training documents, the jvm.options file should be changed as follows to increase the size of the heap:
 ![Capture](https://github.com/faezeh3223/COVID_19_Research/assets/50834330/efe201f7-6625-4b76-a20c-1f7e25f021d6)
 ![image](https://github.com/faezeh3223/COVID_19_Research/assets/50834330/1809d2bf-c7d6-429c-b949-a061c41e8d6e)
+
 Here we have changed the heap size to 4 GB.
 After creating the mentioned settings, we can now implement the program and run it:
 First, we create the relevant classes based on the .json template given in the json_schema file dataset, which is as follows:
