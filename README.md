@@ -1,4 +1,4 @@
-![image](https://github.com/faezeh3223/COVID_19_Research/assets/50834330/20ad921b-650b-49d1-988b-735c03d97f6c)# COVID_19_Research
+# COVID_19_Research
 First, we will describe how to implement the project:
 In this project, object-oriented programming method is used, because in order to speed up and conceptualize the project, it is better to look at each article as an object and then index these objects in elasticsearch.
 Due to the large size of data in an article, which is the same as .json files, a series of settings must be made on elasticsearch, otherwise this service is not ready to store information in this way.
